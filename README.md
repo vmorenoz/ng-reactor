@@ -22,8 +22,8 @@ Luego, puedes crear una tienda con un estado inicial y getters opcionales:
 
 ```typescript
 const store = Reactor.createStore('testStore', {
-  state: { count: 0 },
-  getters: { doubleCount: state => state.count * 2 }
+    state: {count: 0},
+    getters: {doubleCount: state => state.count * 2}
 });
 ```
 

@@ -1,10 +1,6 @@
 {
   "name": "ng-reactor",
-  "version": "0.0.1",
-  "author": {
-    "name": "Vicodev",
-    "url": "https://vmorenoz.dev"
-  },
+  "version": "1.0.3",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
