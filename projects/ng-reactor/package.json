@@ -1,6 +1,12 @@
 {
   "name": "ng-reactor",
-  "version": "1.0.3",
+  "version": "1.0.5",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmorenoz/ng-reactor"
+  },
+  "license": "ISC",
+  "author": "Vicodev",
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
