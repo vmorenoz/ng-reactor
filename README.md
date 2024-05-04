@@ -1,6 +1,6 @@
 # NgReactor
 
-NgReactor es una biblioteca de Angular que proporciona una forma sencilla y eficiente de manejar el estado de tu aplicación.
+NgReactor es una biblioteca de Angular que proporciona una forma sencilla y eficiente de manejar el estado de tu aplicación basado en signals.
 
 ## Instalación
 
@@ -18,23 +18,25 @@ Para usar NgReactor, primero debes importar `Reactor` en tu archivo:
 import { Reactor } from 'ng-reactor';
 ```
 
-Luego, puedes crear una tienda con un estado inicial y getters opcionales:
+Luego, puedes crear un store con un estado inicial y getters opcionales:
 
 ```typescript
-const store = Reactor.createStore('testStore', {
-    state: {count: 0},
-    getters: {doubleCount: state => state.count * 2}
+const store = Reactor.createStore({
+    state: {name: 'John', lastName: 'Doe'},
+    getters: {
+        fullName: (state) => `${state.name} ${state.lastName}`
+    }
 });
 ```
 
 Ahora puedes acceder y modificar el estado de tu store:
 
 ```typescript
-store.count.set(2);
-console.log(store.doubleCount()); // Logs: 4
+store.name.set('Jane');
+console.log(store.fullName()); // Logs: Jane Doe
 ```
 
-## Contribuir
+## Importante
 
 Si encuentras algún problema o tienes alguna sugerencia, no dudes en abrir un issue en nuestro repositorio de GitHub.
 
@@ -42,4 +44,4 @@ Si encuentras algún problema o tienes alguna sugerencia, no dudes en abrir un i
 
 Si te gusta NgReactor y encuentras útil esta biblioteca, por favor considera darle una estrella en GitHub. ¡Tu apoyo significa mucho!
 
-[¡Dale una estrella a NgReactor en GitHub!](https://github.com/vmorenoz/ng-reactor)
+[NgReactor en GitHub](https://github.com/vmorenoz/ng-reactor)
